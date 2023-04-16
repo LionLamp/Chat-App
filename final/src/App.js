@@ -5,12 +5,20 @@ import NavBar from "./components/NavBar";
 import ChatBox from "./components/ChatBox";
 import Welcome from "./components/Welcome";
 
+
 function App() {
   const [user] = useAuthState(auth);
+
   return (
     <div className="App">
       <NavBar />
-      {!user ? <Welcome /> : <ChatBox />}
+      {!user ? (
+        <Welcome />
+      ) : (
+        <>
+          <ChatBox />
+        </>
+      )}
     </div>
   );
 }
