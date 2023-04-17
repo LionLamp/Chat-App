@@ -1,7 +1,8 @@
 {
+  "homepage": "http://lionlamp.github.io/Chat-App",
   "name": "react-chat",
   "version": "1.0.0",
-  "description": "This is the code example for my article on [Building a Real-time Chat App with ReactJs and Firebase](https://www.freecodecamp.org/news/building-a-real-time-chat-app-with-reactjs-and-firebase/) for [FreeCodeCamp](https://freecodecamp.org/). Here is the [live demo](https://react-chat-timonwa.vercel.app/).",
+  "description":"This is my React Chat App",
   "main": "index.js",
   "dependencies": {
     "ansi-regex": "^5.0.1",
@@ -41,7 +42,12 @@
     "yargs-parser": "^20.2.9"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "react scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "keywords": [],
   "author": "",
